@@ -2,6 +2,7 @@ import os, time, cv2
 import numpy as np
 from get_screen import grab_screen
 from get_keys import key_check
+from pathlib import Path
 
 
 key_map = {
@@ -30,14 +31,7 @@ key_map = {
 
 starting_value = 1058
 
-while True:
-    file_name = 'training_data-{0}.npy'.format(starting_value)
-    if os.path.isfile(file_name):
-        print('File exists, moving along', starting_value)
-        starting_value += 1
-    else:
-        print('File does not exist, starting fresh!', starting_value)
-        break
+file_name = 'training_data-{0}.npy'.format(starting_value)
 
 def keys_to_output(keys):
     '''
@@ -80,12 +74,12 @@ def main(file_name, starting_value):
 
             if len(training_data) % 100 == 0:
                 print(len(training_data))
-                if len(training_data) == 10000:
+                if len(training_data) == 100:
                     np.save(file_name, training_data)
                     print('SAVED')
                     training_data = []
                     starting_value += 1
-                    file_name = 'X:/pygta5/phase7-larger-color/training_data-{0}.npy'.format(starting_value)
+                    file_name = 'C:/Users/IyaJe/PycharmProjects/gundyrtrain/data/training_data-{0}.npy'.format(starting_value)
 
         keys = key_check()
         if 'T' in keys:
