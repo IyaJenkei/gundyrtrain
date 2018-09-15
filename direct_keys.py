@@ -24,7 +24,7 @@ keys = {
 'stratk' : 0x09,
 'atk_left' : 0x0A,
 'use_item' : 0x13,
-'two_h_wep' : 0x21,a
+'two_h_wep' : 0x21,
 'open_menu' : 0x01,
 'cancel' : 0x07,
 'lock_on' : 0x10,
