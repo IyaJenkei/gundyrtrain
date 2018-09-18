@@ -65,12 +65,12 @@ def main(file_name, starting_value):
             output = keys_to_output(keys)
             training_data.append([screen,output])
 
-##            print('loop took {} seconds'.format(time.time()-last_time))
+##          print('loop took {} seconds'.format(time.time()-last_time))
             last_time = time.time()
-##            cv2.imshow('window',cv2.resize(screen,(640,360)))
-##            if cv2.waitKey(25) & 0xFF == ord('q'):
-##                cv2.destroyAllWindows()
-##                break
+##          cv2.imshow('window',cv2.resize(screen,(640,360)))
+##          if cv2.waitKey(25) & 0xFF == ord('q'):
+##               cv2.destroyAllWindows()
+##              break
 
             if len(training_data) % 100 == 0:
                 print(len(training_data))
